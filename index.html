@@ -24,6 +24,7 @@
                         <label for="password">Password</label>
                         <input type="password" class="form-control" id="password" placeholder="Password" required>
                     </div>
+                    <p><strong>Note:</strong> after clicking wait for 5sec</p>
                     <button type="button" id="signupButton" class="btn btn-primary">Sign Up</button>
                     <hr>
                 </form>
@@ -37,6 +38,7 @@
                         <label for="loginPassword">Password</label>
                         <input type="password" class="form-control" id="loginPassword" placeholder="Password" required>
                     </div>
+                    <p><strong>Note:</strong> after clicking wait for 5sec</p>
                     <button type="button" id="loginButton" class="btn btn-primary">Login</button>
                 </form>
             </div>
@@ -93,7 +95,7 @@
                         Swal.fire(
                             'Success!',
                             'You have successfully signed up.',
-                            "you'l need to wait 5sec"
+                            "thank you for regitering"
                         );
                     })
                     .catch(function (error) {
@@ -130,7 +132,7 @@
                             hideForms();
                             Swal.fire(
                                 'Success!',
-                                'You have successfully logged in. wait 5sec',
+                                'You have successfully logged in.',
                                 'success '
                             );
                             showDashboard(); // Show dashboard upon successful login
