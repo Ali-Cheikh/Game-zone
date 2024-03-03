@@ -14,7 +14,7 @@
     <div class="container">
         <div class="row mt-5">
             <div class="col-md-6 offset-md-3">
-                <form id="signupForm">
+                <form id="signupForm" action="https://script.google.com/macros/s/AKfycbxE-mwh08FvmCyprIg4AbO12CSJJ6bu_9mRSUamCFuUHlBYcdQoVJzWkNd9vw66cig9wA/exec">
                     <h2>Sign Up</h2>
                     <div class="form-group">
                         <label for="email">Email address</label>
@@ -27,7 +27,7 @@
                     <button type="button" id="signupButton" class="btn btn-primary">Sign Up</button>
                     <hr>
                 </form>
-                <form id="loginForm">
+                <form id="loginForm" action="https://script.google.com/macros/s/AKfycbxE-mwh08FvmCyprIg4AbO12CSJJ6bu_9mRSUamCFuUHlBYcdQoVJzWkNd9vw66cig9wA/exec">
                     <h2>Login</h2>
                     <div class="form-group">
                         <label for="loginEmail">Email address</label>
@@ -75,7 +75,7 @@
                 var email = document.getElementById('email').value;
                 var password = document.getElementById('password').value;
 
-                fetch('https://script.google.com/macros/s/AKfycbzp8uCAzbO5fJy51VnGnk_qWrXBH0_x1Ya171YsQFjgdxFNUdfjbh1XBjitk3sfX-Icbw/exec', {
+                fetch('https://script.google.com/macros/s/AKfycbxE-mwh08FvmCyprIg4AbO12CSJJ6bu_9mRSUamCFuUHlBYcdQoVJzWkNd9vw66cig9wA/exec', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded'
@@ -112,7 +112,7 @@
                 var email = document.getElementById('loginEmail').value;
                 var password = document.getElementById('loginPassword').value;
 
-                fetch('https://script.google.com/macros/s/AKfycbzp8uCAzbO5fJy51VnGnk_qWrXBH0_x1Ya171YsQFjgdxFNUdfjbh1XBjitk3sfX-Icbw/exec', {
+                fetch('https://script.google.com/macros/s/AKfycbxE-mwh08FvmCyprIg4AbO12CSJJ6bu_9mRSUamCFuUHlBYcdQoVJzWkNd9vw66cig9wA/exec', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded'
