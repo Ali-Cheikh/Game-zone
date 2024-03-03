@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <meta property="og:title" content="Ali Cheikh ">
     <meta property="og:description" content="this is my simple log in and signup website">
-    <meta property="og:image" content="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAA4CAMAAABXNCH6AAAAe1BMVEX///8gpGQXoF0hpGQfpGMlpmcipWUZoV8YoV8XoF4jpWYeo2IkpWYWoF0do2IaomCO0bHW6t4bomEcomH59fcAmk8An1mIw6G518Xs9O5xuY8ckVr/+f0blltuupXy8vLc6OHP4dZlvZAAikxFq3Q1p2t6wZoWilYAkE5wyjF1AAACIUlEQVRIiYXW23qiMBQGUBEHIhJSgcRRYayttvP+Tzj7kEBOY/8bcrG+newQDpsN5JzLJs3JZKL1R2K/zC9O27ZNU1VVWRZFsVMfbxE9O5jKiB5fyJC+lAF9LX3qywZliXLnpEePQeupXOkx3aRQLtRJV9Iu05OOWtkGk4OUq7SUZeuVpMkDyZSkhd7ku/75FtGjaTleSZSHoChSK5smnPxwOMjHHy9nKwNoZafm7yWfd5CNDUOWCDumV8rn+yqruGTXDWq+XmNZrXCRw7BSJysHw5LD0HdA53lmWVUxXEr2fa9myt/jIssymttJFcoygiwJKrV3snQp/LmXkqpG6ssihCwR1khXCarPvCAkSaH2LKla0V9+p7lIhELsNUqGhTxNY5zpZLJyvL1Tbjc3GFEiXCUe8tM4GY0vr/t415QpkjsOSoHNGpAGrkI6uU8lNCsl1YSrMSRFJOGIwzonyngbeYDrZLgleeD8p6O8nPTSkXEdMUwk3BIhqCMhhZQZifcZ5ROjQCp6CZAkyLLjrB3BOr2O8vJOAWkHIBmuEo6Yof1M7hFLSXLgoJQSNsXtPHfEMJDY0QPzBPmkEcltLHuoeeOzBuu0AyullT3H5M8nw60vxeOS5iEzspf20QmeIwsXqZbUFMHnwvbtpFaxy8BIem6BPLcv69p3CaRd0rWfFEq382cds9WtUGr4eFy08FkGYskL/Yjon/Pl/kV+CqJ/jXJ8SPVkF6QAAAAASUVORK5CYII="
+    <meta property="og:image" content="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAA4CAMAAABXNCH6AAAAe1BMVEX///8gpGQXoF0hpGQfpGMlpmcipWUZoV8YoV8XoF4jpWYeo2IkpWYWoF0do2IaomCO0bHW6t4bomEcomH59fcAmk8An1mIw6G518Xs9O5xuY8ckVr/+f0blltuupXy8vLc6OHP4dZlvZAAikxFq3Q1p2t6wZoWilYAkE5wyjF1AAACIUlEQVRIiYXW23qiMBQGUBEHIhJSgcRRYayttvP+Tzj7kEBOY/8bcrG+newQDpsN5JzLJs3JZKL1R2K/zC9O27ZNU1VVWRZFsVMfbxE9O5jKiB5fyJC+lAF9LX3qywZliXLnpEePQeupXOkx3aRQLtRJV9Iu05OOWtkGk4OUq7SUZeuVpMkDyZSkhd7ku/75FtGjaTleSZSHoChSK5smnPxwOMjHHy9nKwNoZafm7yWfd5CNDUOWCDumV8rn+yqruGTXDWq+XmNZrXCRw7BSJysHw5LD0HdA53lmWVUxXEr2fa9myt/jIssymttJFcoygiwJKrV3snQp/LmXkqpG6ssihCwR1khXCarPvCAkSaH2LKla0V9+p7lIhELsNUqGhTxNY5zpZLJyvL1Tbjc3GFEiXCUe8tM4GY0vr/t415QpkjsOSoHNGpAGrkI6uU8lNCsl1YSrMSRFJOGIwzonyngbeYDrZLgleeD8p6O8nPTSkXEdMUwk3BIhqCMhhZQZifcZ5ROjQCp6CZAkyLLjrB3BOr2O8vJOAWkHIBmuEo6Yof1M7hFLSXLgoJQSNsXtPHfEMJDY0QPzBPmkEcltLHuoeeOzBuu0AyullT3H5M8nw60vxeOS5iEzspf20QmeIwsXqZbUFMHnwvbtpFaxy8BIem6BPLcv69p3CaRd0rWfFEq382cds9WtUGr4eFy08FkGYskL/Yjon/Pl/kV+CqJ/jXJ8SPVkF6QAAAAASUVORK5CYII=">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </head>
 <body>
     <div class="container">
         <div class="row mt-5">
             <div class="col-md-6 offset-md-3">
-                <form id="signupForm" action="https://script.google.com/macros/s/AKfycbxE-mwh08FvmCyprIg4AbO12CSJJ6bu_9mRSUamCFuUHlBYcdQoVJzWkNd9vw66cig9wA/exec">
+                <form id="signupForm">
                     <h2>Sign Up</h2>
                     <div class="form-group">
                         <label for="email">Email address</label>
@@ -27,7 +27,7 @@
                     <button type="button" id="signupButton" class="btn btn-primary">Sign Up</button>
                     <hr>
                 </form>
-                <form id="loginForm" action="https://script.google.com/macros/s/AKfycbxE-mwh08FvmCyprIg4AbO12CSJJ6bu_9mRSUamCFuUHlBYcdQoVJzWkNd9vw66cig9wA/exec">
+                <form id="loginForm">
                     <h2>Login</h2>
                     <div class="form-group">
                         <label for="loginEmail">Email address</label>
