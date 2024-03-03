@@ -89,12 +89,12 @@
                         throw new Error('Network response was not ok.');
                     })
                     .then(function (data) {
+                        hideSignup();
                         Swal.fire(
                             'Success!',
                             'You have successfully signed up.',
-                            'success'
+                            "you'l need to wait 5sec"
                         );
-                        hideSignup();
                     })
                     .catch(function (error) {
                         console.error(error);
@@ -127,12 +127,12 @@
                     })
                     .then(function (data) {
                         if (data.trim() === "Success") {
+                            hideForms();
                             Swal.fire(
                                 'Success!',
-                                'You have successfully logged in.',
-                                'success'
+                                'You have successfully logged in. wait 5sec',
+                                'success '
                             );
-                            hideForms();
                             showDashboard(); // Show dashboard upon successful login
                         } else {
                             Swal.fire(
