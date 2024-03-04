@@ -99,6 +99,14 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
 
+            // Function to hide sign-up and login forms
+            function hideForms() {
+                document.getElementById('hide').style.display = 'none';
+            }
+            function hideSignup() {
+                document.getElementById('signupForm').style.display = 'none';
+            }
+
             // Function to show dashboard
             function showDashboard() {
                 document.getElementById('dashboard').style.display = 'block';
@@ -124,6 +132,7 @@
                         throw new Error('Network response was not ok.');
                     })
                     .then(function (data) {
+                        hideSignup();
                         Swal.fire(
                             'Success!',
                             'You have successfully signed up.',
@@ -161,6 +170,7 @@
                     })
                     .then(function (data) {
                         if (data.trim() === "Success") {
+                            hideForms();
                             Swal.fire(
                                 'Success!',
                                 'You have successfully logged in.',
