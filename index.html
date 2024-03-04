@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login and Sign Up</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <meta property="og:title" content="Ali Cheikh ">
     <meta property="og:description" content="this is my simple log in and signup website">
@@ -53,27 +54,6 @@
             </div>
         </div>
     </div>
-        <script>
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbxE-mwh08FvmCyprIg4AbO12CSJJ6bu_9mRSUamCFuUHlBYcdQoVJzWkNd9vw66cig9wA/exec';
-
-        document.addEventListener('DOMContentLoaded', function () {
-        const form = document.forms['contact-form'];
-
-        form.addEventListener('click', function (event) {
-            e.preventDefault();
-
-            // Show SweetAlert immediately when the submit button is clicked
-            Swal.fire({
-                icon: 'info',
-                title: 'Please wait...',
-                text: 'Sending your message',
-                showConfirmButton: false,
-                allowOutsideClick: false,
-                });
-            });
-        });
-        </script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             // Function to hide sign-up and login forms
@@ -114,7 +94,7 @@
                         Swal.fire(
                             'Success!',
                             'You have successfully signed up.',
-                            "thank you for regitering"
+                            "thank you for registering"
                         );
                     })
                     .catch(function (error) {
