@@ -10,42 +10,63 @@
     <meta property="og:description" content="this is my simple log in and signup website">
     <meta property="og:image" content="https://blog.golayer.io/uploads/images/article/_1200x630_crop_center-center_82_none/How-Secure-Is-Google-Sheets-Google-Sheets-Security-Tips.jpg?mtime=1672317864">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="card.css">
 </head>
 <body>
-    <div class="container">
-        <div class="row mt-5">
-            <div class="col-md-6 offset-md-3">
-                <form id="signupForm">
-                    <h2>Sign Up</h2>
-                    <div class="form-group">
-                        <label for="email">Email address</label>
-                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" required>
+    <center>
+        <div id="hide">
+            <div class="containerLogin" id="containerLogin">
+                <div class="form-container sign-up">
+                        <form id="signupForm">
+                            <div class="social-icons">
+                                <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                                <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                                <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                            </div>
+                            <span>or use your email for registration</span>
+                                <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+                                <input type="password" class="form-control" id="password" placeholder="Password" required>
+                                <a> please wait at least 10sec after clicking the button</a>
+                            <button type="button" id="signupButton" class="btn btn-primary">submit</button>
+                            <hr>
+                        </form>
+                </div>
+                <div class="form-containerLogin sign-in">
+                        <form id="loginForm">
+                            <img src="logo.png" style="background-color: black;" width="100%">
+                            <div class="social-icons">
+                                <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                                <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                                <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                            </div>
+                            <span>or use your email password</span>
+                                <input type="email" class="form-control" id="loginEmail" placeholder="Enter email" required>
+                                <input type="password" class="form-control" id="loginPassword" placeholder="Password" required>
+                                <a href="#">Forget Your Password?</a>
+                                <a> please wait at least 10sec after clicking the button</a>
+                                <button type="button" id="loginButton" class="btn btn-primary">submit</button>
+                        </form>
+                </div>
+                <div class="toggle-containerLogin">
+                    <div class="toggle">
+                        <div class="toggle-panel toggle-left">
+                            <h1>Welcome Back!</h1>
+                            <p>Enter your personal details to use all of site features</p>
+                            <button class="hidden" id="loginn">Register</button>
+                        </div>
+                        <div class="toggle-panel toggle-right">
+                            <h1>Hello, Friend!</h1>
+                            <p>Register with your personal details to use all of site features</p>
+                            <button class="hidden" id="registerr">Login</button>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" placeholder="Password" required>
-                    </div>
-                    <p><strong>Note:</strong> after clicking wait for 5sec</p>
-                    <button type="button" id="signupButton" class="btn btn-primary">Sign Up</button>
-                    <hr>
-                </form>
-                <form id="loginForm">
-                    <h2>Login</h2>
-                    <div class="form-group">
-                        <label for="loginEmail">Email address</label>
-                        <input type="email" class="form-control" id="loginEmail" aria-describedby="emailHelp" placeholder="Enter email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="loginPassword">Password</label>
-                        <input type="password" class="form-control" id="loginPassword" placeholder="Password" required>
-                    </div>
-                    <p><strong>Note:</strong> after clicking wait for 5sec</p>
-                    <button type="button" id="loginButton" class="btn btn-primary">Login</button>
-                </form>
+                </div>
             </div>
         </div>
-    </div>
-
+    </center>
     <div class="container" id="dashboard" style="display: none;">
         <div class="row mt-5">
             <div class="col-md-6 offset-md-3">
@@ -55,14 +76,26 @@
         </div>
     </div>
     <script>
+        const containerLogin = document.getElementById('containerLogin');
+        const registerBtn = document.getElementById('registerr');
+        const loginBtn = document.getElementById('loginn');
+
+        registerBtn.addEventListener('click', () => {
+            containerLogin.classList.add("active");
+        });
+
+        loginBtn.addEventListener('click', () => {
+            containerLogin.classList.remove("active");
+        });
+    </script>
+    <script>
         document.addEventListener('DOMContentLoaded', function () {
             // Function to hide sign-up and login forms
             function hideForms() {
-                document.getElementById('signupForm').style.display = 'none';
-                document.getElementById('loginForm').style.display = 'none';
+                document.getElementById('hide').style.display = 'none';
             }
             function hideSignup() {
-                document.getElementById('signupForm').style.display = 'none';
+                document.getElementById('signupForms').style.display = 'none';
             }
 
             // Function to show dashboard
