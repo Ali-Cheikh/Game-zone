@@ -25,7 +25,7 @@
                         <input type="password" class="form-control" id="password" placeholder="Password" required>
                     </div>
                     <p><strong>Note:</strong> after clicking wait for 5sec</p>
-                    <button type="s" id="signupButton" class="btn btn-primary">Sign Up</button>
+                    <button type="button" id="signupButton" class="btn btn-primary">Sign Up</button>
                     <hr>
                 </form>
                 <form id="loginForm">
@@ -39,7 +39,7 @@
                         <input type="password" class="form-control" id="loginPassword" placeholder="Password" required>
                     </div>
                     <p><strong>Note:</strong> after clicking wait for 5sec</p>
-                    <button type="submit" id="loginButton" class="btn btn-primary">Login</button>
+                    <button type="button" id="loginButton" class="btn btn-primary">Login</button>
                 </form>
             </div>
         </div>
@@ -59,7 +59,7 @@
         document.addEventListener('DOMContentLoaded', function () {
         const form = document.forms['contact-form'];
 
-        form.addEventListener('submit', e => {
+        form.addEventListener('click', function (event) {
             e.preventDefault();
 
             // Show SweetAlert immediately when the submit button is clicked
