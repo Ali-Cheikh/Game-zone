@@ -1,3 +1,34 @@
+
+const products = [
+    { name: 'product 1', price: 20, image: '/product/product.avif', intro: 'product description' },
+    { name: 'product 2', price: 15, image: '/product/product.avif', intro: 'product description' },
+    { name: 'product 3', price: 150, image: '/product/product.avif', intro: 'product description' },
+];
+
+displayProducts();
+
+function displayProducts() {
+    const productListDiv = document.getElementById('product-list');
+    productListDiv.innerHTML = '';
+
+    products.forEach(product => {
+        // replace product img later with ${product.name}
+        const productCard = `
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <img src="${product.image}" class="card-img-top" alt="product img ">
+                    <div class="card-body">
+                        <h5 class="card-title">${product.name}</h5>
+                        <q>${product.intro}</q><br><hr>
+                        <p class="card-text">Price: ${product.price}.<small>00</small>TND</p>
+                        <button class="btn btn-primary" onclick="buyProduct('${product.name}', ${product.price})">Buy</button>
+                    </div>
+                </div>
+            </div>
+        `;
+        productListDiv.innerHTML += productCard;
+    });
+}
 const containerLogin = document.getElementById('containerLogin');
 const registerBtn = document.getElementById('registerr');
 const loginBtn = document.getElementById('loginn');
