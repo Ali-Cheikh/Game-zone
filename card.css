@@ -171,3 +171,140 @@
 .containerLogin.active .toggle-right{
     transform: translateX(200%);
 }
+
+.card {
+    border-radius: 20px;
+    background-color: #ffffff00;
+    color: white;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    border: solid 1px white;
+}
+.profile-img {
+    width: 100px;
+    height: 100px;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 0 auto;
+}
+
+
+.name {
+    text-align: center;
+    margin-bottom: 15px;
+    color: rgb(173, 173, 250);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.intro {
+    color: #add0df;
+    padding: 5%;
+    margin-bottom: 50px;
+    font-size: 16px;
+    line-height: 1.6;
+    border-left: solid 2px rgb(48, 36, 36);
+
+}
+
+.email-text {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 18px;
+}
+
+.email-button {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 3; /* Increase the z-index to ensure the email button appears above other elements */
+}
+
+.email-button a:hover {
+    color: #ffcc00;
+}
+
+.email-button:hover{
+    border:solid 1px #ffcc00;
+    border-radius: 16px;
+}
+
+
+.email-button a{
+    color: white;
+    font-size: 18px;
+}
+
+.kebab-menu {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    z-index: 3; /* Ensure the kebab menu appears above other elements */
+}
+
+.links {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    z-index: 2; /* Ensure the links appear above other elements except the email button */
+}
+
+.link-container {
+    overflow: hidden;
+    height: 0;
+    transition: height 0.3s ease-in-out;
+}
+
+.links.show-links .link-container {
+    height: auto;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    background-color: #312c2c;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.link i {
+    margin-right: 5px;
+}
+
+.link:hover {
+    background-color: #808080;
+}
+
+/* New CSS for changing color on hover for GitHub and website links */
+.link.hoverColor:hover {
+    color: rgb(255, 194, 82) ;
+    background-color: #000000;
+}
+
+.contact-icons {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 2; /* Ensure the contact icons appear above other elements */
+}
+
+.contact-icons a {
+    color: white;
+    font-size: 24px;
+    padding-left: 5px;
+}
+
+.contact-icons a:hover {
+    color: #ffcc00;
+}

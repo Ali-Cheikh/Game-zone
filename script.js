@@ -1,34 +1,89 @@
-
-const products = [
-    { name: 'product 1', price: 20, image: '/product/product.avif', intro: 'product description' },
-    { name: 'product 2', price: 15, image: '/product/product.avif', intro: 'product description' },
-    { name: 'product 3', price: 150, image: '/product/product.avif', intro: 'product description' },
+const people = [
+    {
+        name: 'Ali Cheikh',
+        github: "https://github.com/Ali-Cheikh",
+        instagram: "link",
+        facebook: " ",
+        website: "bit.ly/Aliportfolio",
+        image: 'person.svg',
+        intro: ` I'm a <b style="color: green;font-family: cursive;">self made Developer</b> I love to create thing out of writing code.<i> Design, build, Publish? </i>, depend on me to take a part 👍<br>
+        <ins> Computer science student at LFBA</ins> `,
+        email: "someone@gmail.com",
+        profession: 'developer',
+    },
+    {
+        name: 'Yassine Souissi',
+        github: "https://github.com/Ali-Cheikh",
+        instagram: "https://www.instagram.com/yassinesouissi653/",
+        facebook: "https://www.facebook.com/yassine.souissi.5621?locale=fr_FR",
+        website: "https://loordyassin.github.io/portfolio/",
+        image: 'person.svg',
+        intro: `HI<b style="color:white"> !</b>I'm <b style="color:white"> Y</b>assine <b style="color:white"> S</b>ouissi Product designer and digital creative director who has been working in the design field for 4 years. Specialized in Google website design`,
+        email: "yassinesouissi653@gmail.com",
+        profession: 'designer',
+    }
 ];
 
-displayProducts();
+displayPeople();
 
-function displayProducts() {
-    const productListDiv = document.getElementById('product-list');
-    productListDiv.innerHTML = '';
+function displayPeople() {
+    const peopleListDiv = document.getElementById('people-list');
+    peopleListDiv.innerHTML = '';
 
-    products.forEach(product => {
-        // replace product img later with ${product.name}
-        const productCard = `
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card">
-                    <img src="${product.image}" class="card-img-top" alt="product img ">
-                    <div class="card-body">
-                        <h5 class="card-title">${product.name}</h5>
-                        <q>${product.intro}</q><br><hr>
-                        <p class="card-text">Price: ${product.price}.<small>00</small>TND</p>
-                        <button class="btn btn-primary" onclick="buyProduct('${product.name}', ${product.price})">Buy</button>
+    people.forEach(person => {
+        const personCard = `
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card rounded bg-none text-white">
+                <div class="profile-img"><img src="${person.image}" alt="couldn't load image"></div>
+                <div class="name">${person.name}</div>
+                <div class="intro"><p>${person.intro}</p></div>
+                <div class="email-text">${person.email}<br><span class="text-success text-uppercase"><b>${person.profession}</b></span></div>
+                <div class="contact-icons">
+                    ${person.facebook && `<a href="${person.facebook}" target="_blank"><i class="fab fa-facebook"></i></a>`}
+                    ${person.instagram && `<a href="${person.instagram}" target="_blank"><i class="fab fa-instagram"></i></a>`}
+                </div>
+                <div class="kebab-menu">
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+                <div class="links">
+                    <div class="link-container">
+                        ${person.website && `<a class="link hoverColor" href="${person.website}" target="_blank"><i class="fas fa-globe"></i> Website</a>`}
+                    </div>
+                    <div class="link-container">
+                        ${person.github && `<a class="link hoverColor" href="${person.github}" target="_blank"><i class="fab fa-github"></i> GitHub</a>`}
                     </div>
                 </div>
+                <div class="email-button">
+                    <a class="btn" href="mailto:${person.email}"><i class="fas fa-envelope"></i></a>
+                </div>
             </div>
+        </div>
         `;
-        productListDiv.innerHTML += productCard;
+        peopleListDiv.innerHTML += personCard;
     });
 }
+
+$(document).ready(function() {
+    $('.kebab-menu').click(function(event) {
+        $('.links').toggleClass('show-links');
+        event.stopPropagation(); // Prevent the click event from propagating to the document
+    });
+
+    // Hide links when clicking outside of the kebab menu and links container
+    $(document).click(function(event) {
+        if (!$(event.target).closest('.kebab-menu').length && !$(event.target).closest('.links').length) {
+            $('.links').removeClass('show-links');
+        }
+    });
+
+    // Prevent hiding links when clicking on the contact icons
+    $('.contact-icons').click(function(event) {
+        event.stopPropagation();
+    });
+});
+
+
+
 const containerLogin = document.getElementById('containerLogin');
 const registerBtn = document.getElementById('registerr');
 const loginBtn = document.getElementById('loginn');
