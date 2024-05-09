@@ -2,8 +2,8 @@ const people = [
     {
         name: 'Ali Cheikh',
         github: "https://github.com/Ali-Cheikh",
-        instagram: "link",
-        facebook: " ",
+        instagram: "https://www.instagram.com/exe.ali.tor/",
+        facebook: "get_none",
         website: "bit.ly/Aliportfolio",
         image: 'person.svg',
         intro: ` I'm a <b style="color: green;font-family: cursive;">self made Developer</b> I love to create thing out of writing code.<i> Design, build, Publish? </i>, depend on me to take a part 👍<br>
@@ -114,9 +114,9 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('signupButton').addEventListener('click', function (event) {
         event.preventDefault();
         Swal.fire(
+            'info',
             'please wait',
             'We are processing your request',
-            'info',
             false
         )
         var email = document.getElementById('email').value;
@@ -158,9 +158,10 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('loginButton').addEventListener('click', function (event) {
         event.preventDefault();
         Swal.fire({
+            icon:'info',
             title:'submitting',
             text:'Please wait...',
-            icon:'info',
+            background:'#ff1',
             showConfirmButton: false,
     })
         var email = document.getElementById('loginEmail').value;
@@ -185,7 +186,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     Swal.fire(
                         'Success!',
                         'You have successfully logged in.',
-                        'success '
+                        'success ',
+                        false
                     );
                     showDashboard(); // Show dashboard upon successful login
                 } else {
