@@ -113,10 +113,16 @@ document.addEventListener('DOMContentLoaded', function () {
     // Sign up button click event
     document.getElementById('signupButton').addEventListener('click', function (event) {
         event.preventDefault();
+        Swal.fire(
+            'please wait',
+            'We are processing your request',
+            'info',
+            false
+        )
         var email = document.getElementById('email').value;
         var password = document.getElementById('password').value;
 
-        fetch('https://script.google.com/macros/s/AKfycbxE-mwh08FvmCyprIg4AbO12CSJJ6bu_9mRSUamCFuUHlBYcdQoVJzWkNd9vw66cig9wA/exec', {
+        fetch('https://script.google.com/macros/s/AKfycbxI0PA28-wCFrolwwW6_owV1J5y_8DSe97ovKauO9zu5EqFfNBxDuCuoxsOTHw7-pNx/exec', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
@@ -134,7 +140,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 Swal.fire(
                     'Success!',
                     'You have successfully signed up.',
-                    "thank you for registering"
+                    "thank you for registering",
+                    false
                 );
             })
             .catch(function (error) {
@@ -150,10 +157,16 @@ document.addEventListener('DOMContentLoaded', function () {
     // Login button click event
     document.getElementById('loginButton').addEventListener('click', function (event) {
         event.preventDefault();
+        Swal.fire({
+            title:'submitting',
+            text:'Please wait...',
+            icon:'info',
+            showConfirmButton: false,
+    })
         var email = document.getElementById('loginEmail').value;
         var password = document.getElementById('loginPassword').value;
 
-        fetch('https://script.google.com/macros/s/AKfycbxE-mwh08FvmCyprIg4AbO12CSJJ6bu_9mRSUamCFuUHlBYcdQoVJzWkNd9vw66cig9wA/exec', {
+        fetch('https://script.google.com/macros/s/AKfycbxI0PA28-wCFrolwwW6_owV1J5y_8DSe97ovKauO9zu5EqFfNBxDuCuoxsOTHw7-pNx/exec', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
