@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var email = document.getElementById('email').value;
         var password = document.getElementById('password').value;
 
-        fetch('https://script.google.com/macros/s/AKfycbxI0PA28-wCFrolwwW6_owV1J5y_8DSe97ovKauO9zu5EqFfNBxDuCuoxsOTHw7-pNx/exec', {
+        fetch('https://script.google.com/macros/s/AKfycbwklf3xjzWLkH6uMZe_E7q_s4iVngYPzjZPG0uNDiwFVdXHg2kg37YhA9EuhtaeInug/exec', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var email = document.getElementById('loginEmail').value;
         var password = document.getElementById('loginPassword').value;
 
-        fetch('https://script.google.com/macros/s/AKfycbxI0PA28-wCFrolwwW6_owV1J5y_8DSe97ovKauO9zu5EqFfNBxDuCuoxsOTHw7-pNx/exec', {
+        fetch('https://script.google.com/macros/s/AKfycbwklf3xjzWLkH6uMZe_E7q_s4iVngYPzjZPG0uNDiwFVdXHg2kg37YhA9EuhtaeInug/exec', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
